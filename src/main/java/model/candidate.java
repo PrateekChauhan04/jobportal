@@ -7,7 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+//gyugugugiu
 
 @Entity
 public class candidate {
@@ -45,6 +45,15 @@ List<experience>exp=new ArrayList<experience>();
 @ElementCollection
 List<education>edu=new ArrayList<education>();
 
+<<<<<<< HEAD
+@ManyToMany
+List<Employer> emp = new ArrayList<Employer>();
+@ManyToMany
+List<vacancy> van = new ArrayList<vacancy>();
+
+
+=======
+>>>>>>> 08b3359350791098c20f67902f4a7ea21759b704
 
 public String getName() {
 	return name;

@@ -25,7 +25,7 @@ public class Employer {
 	private String companyName;
 	
 	@OneToMany (mappedBy = "emp")
-	List<vaccancy> vaccancies=new ArrayList<vaccancy>();
+	List<vacancy> vaccancies=new ArrayList<vacancy>();
 	
 	@ManyToMany(mappedBy = "emp")
     List<candidate> c = new ArrayList<candidate>();
