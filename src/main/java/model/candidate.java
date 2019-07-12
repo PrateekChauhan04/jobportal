@@ -47,7 +47,7 @@ List<education>edu=new ArrayList<education>();
 @ManyToMany
 List<Employer> emp = new ArrayList<Employer>();
 @ManyToMany
-List<vaccancy> van = new ArrayList<vaccancy>();
+List<vacancy> van = new ArrayList<vacancy>();
 
 
 
