@@ -2,15 +2,16 @@ package Dao;
 
 import java.util.List;
 
+import model.Company;
 import model.vacancy;
 
 public interface CompanyDao {
 
-public void createVacancy(vacancy v);
-public void  updateVacancy(vacancy v);
-public void deleteVacancy(vacancy v);
+public void createCompany(Company c);
+public void  updateCompany(Company c );
+public void deleteCompany(Company c);
 	
 	
-public List<vacancy> readAll();
+public List<Company> readAll();
 
 }
