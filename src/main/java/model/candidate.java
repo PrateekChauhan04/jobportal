@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+
 
 @Entity
 public class candidate {
@@ -16,9 +16,10 @@ String name;
 
 @Column
 String email;
-@Column
+
 @Id
-String mobile_number;
+@Column
+String mobileNumber;
 @Column
 int age;
 
@@ -37,18 +38,12 @@ String gender;
 @Column
 String password;
 
-@ManyToMany(mappedBy="c")
+@ElementCollection
 List<experience>exp=new ArrayList<experience>();
 
 
-@ManyToMany(mappedBy="can")
+@ElementCollection
 List<education>edu=new ArrayList<education>();
-
-@ManyToMany
-List<Employer> emp = new ArrayList<Employer>();
-@ManyToMany
-List<vaccancy> van = new ArrayList<vaccancy>();
-
 
 
 public String getName() {
@@ -71,13 +66,13 @@ public void setEmail(String email) {
 }
 
 
-public String getMobile_number() {
-	return mobile_number;
+public String getMobileNumber() {
+	return mobileNumber;
 }
 
 
-public void setMobile_number(String mobile_number) {
-	this.mobile_number = mobile_number;
+public void setMobileNumber(String mobileNumber) {
+	this.mobileNumber = mobileNumber;
 }
 
 
@@ -151,17 +146,16 @@ public void setPassword(String password) {
 }
 
 
-public List<experience> getExp() {
-	return exp;
+
+
+public List<education> getEdu() {
+	return edu;
 }
 
 
-public void setExp(List<experience> exp) {
-	this.exp = exp;
+public void setEdu(List<education> edu) {
+	this.edu = edu;
 }
-
-
-
 
 
 }
