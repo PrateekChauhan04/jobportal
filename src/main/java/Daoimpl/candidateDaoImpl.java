@@ -1,5 +1,6 @@
-package candidateDaopackage;
+package Daoimpl;
 
+import Dao.candidateDao;
 import model.candidate;
 import model.education;
 
