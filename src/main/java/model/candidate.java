@@ -7,7 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-//gyugugugiu
+
 
 @Entity
 public class candidate {
