@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 
 @Entity
@@ -45,6 +46,8 @@ List<experience>exp=new ArrayList<experience>();
 @ElementCollection
 List<education>edu=new ArrayList<education>();
 
+@ManyToMany
+List<vacancy>van=new ArrayList<vacancy>();
 
 public String getName() {
 	return name;
