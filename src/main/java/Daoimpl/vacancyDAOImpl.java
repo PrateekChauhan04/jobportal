@@ -6,7 +6,7 @@ import Dao.vaccancy_dao;
 import model.vacancy;
 public class vacancyDAOImpl implements vaccancy_dao{
 
-	public void addVacancy(vacancy v) {
+	public void createVacancy(vacancy v) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -29,6 +29,11 @@ public class vacancyDAOImpl implements vaccancy_dao{
 	public List<vacancy> readAll() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void addVacancy(vacancy v) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
