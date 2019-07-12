@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: swapnil
 Build-Jdk: 1.8.0_111
+=======
+Built-By: shobhit dubey
+Build-Jdk: 1.8.0_202
+>>>>>>> 08b3359350791098c20f67902f4a7ea21759b704
 Created-By: Maven Integration for Eclipse
 
