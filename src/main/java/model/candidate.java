@@ -46,6 +46,26 @@ List<experience>exp=new ArrayList<experience>();
 @ElementCollection
 List<education>edu=new ArrayList<education>();
 
+public List<experience> getExp() {
+	return exp;
+}
+
+
+public void setExp(List<experience> exp) {
+	this.exp = exp;
+}
+
+
+public List<vacancy> getVan() {
+	return van;
+}
+
+
+public void setVan(List<vacancy> van) {
+	this.van = van;
+}
+
+
 @ManyToMany
 List<vacancy>van=new ArrayList<vacancy>();
 
