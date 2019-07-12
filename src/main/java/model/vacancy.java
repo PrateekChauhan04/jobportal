@@ -11,14 +11,14 @@ import javax.persistence.ManyToOne;
 
 @Entity
 
-public class vaccancy {
+public class vacancy {
 	@Column
 	String last_date_to_apply;
 	@Column
-	int no_of_vaccancy;
+	int no_of_vacancy;
 	@Column
 	@Id
-	int vaccancy_id;
+	int vacancy_id;
 	@Column
 	float payment_scale;
 	@Column
@@ -44,19 +44,19 @@ public class vaccancy {
 	public void setLast_date_to_apply(String last_date_to_apply) {
 		this.last_date_to_apply = last_date_to_apply;
 	}
-	@Column(name="no_of_vaccancy")
-	public int getNo_of_vaccancy() {
-		return no_of_vaccancy;
+	@Column(name="no_of_vacancy")
+	public int getNo_of_vacancy() {
+		return no_of_vacancy;
 	}
-	public void setNo_of_vaccancy(int no_of_vaccancy) {
-		this.no_of_vaccancy = no_of_vaccancy;
+	public void setNo_of_vaccancy(int no_of_vacancy) {
+		this.no_of_vacancy = no_of_vacancy;
 	}
 
-	public int getVaccancy_id() {
-		return vaccancy_id;
+	public int getVacancy_id() {
+		return vacancy_id;
 	}
-	public void setVaccancy_id(int vaccancy_id) {
-		this.vaccancy_id = vaccancy_id;
+	public void setVaccancy_id(int vacancy_id) {
+		this.vacancy_id = vacancy_id;
 	}
 	@Column(name="payment_scale")
 	public float getPayment_scale() {
