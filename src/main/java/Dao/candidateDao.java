@@ -1,4 +1,4 @@
-package candidateDaopackage;
+package Dao;
 
 import model.candidate;
 import model.education;
