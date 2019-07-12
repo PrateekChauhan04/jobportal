@@ -1,5 +1,5 @@
 package Dao;
-import antlr.collections.List;
+
 import model.Employer;
 public interface EmployerDao {
 
