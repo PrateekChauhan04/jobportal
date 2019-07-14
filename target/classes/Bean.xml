@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+<property name="url" value="jdbc:mysql://localhost:3306/testing"></property> 
+<property name="username" value="root"></property>
+<property name="password" value="Gaurav"></property>
+</bean>
+
+<bean id="mysessionfactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+<property name="dataSource" ref="ds"></property>
+<property name="anotatedClasses">
+<list>
+<value>model.Student</value>
+
+</list>
+</property> 
+
+<property name="hibernateProperties">
+ <props>
+  <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+        <prop key="hibernate.show_sql">true</prop>
+        <prop key="hibernate.hbm2ddl.auto">update</prop>
+</props>
+
+</property>
+
+
+</bean>
+
+
+
+
+<bean id="template" class="org.springframework.orm.hibernate3.HibernateTemplate">  
+    <property name="sessionFactory" ref="mysessionFactory"></property>  
+    </bean>
+
+<bean id="candidatedaoimpl" class="Daoimpl.candidateDaoImpl">
+<property name="hTemplate" value="template"></property>
+
+</bean>
+
+<bean id="compantdaoimpl" class="Daoimpl.Companydaoimpl">
+<property name="hTemplate" value="template"></property>
+
+</bean>
+
+<bean id="candidatedaoimpl" class="Daoimpl.Employerdaoimpl">
+<property name="hTemplate" value="template"></property>
+
+</bean>
+
+<bean id="candidatedaoimpl" class="Daoimpl.vacancyDAOImpl">
+<property name="hTemplate" value="template"></property>
+
+</bean>
+
+
+<bean id="std" class="model.candidate">
+
+</bean>
+
+<bean id="std" class="model.Company">
+
+</bean>
+
+<bean id="std" class="model.Employer">
+
+</bean>
+
+<bean id="std" class="model.vacancy">
+
+</bean>
+
+
+
+
+</beans>

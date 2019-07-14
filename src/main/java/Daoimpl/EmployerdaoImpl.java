@@ -1,9 +1,21 @@
 package Daoimpl;
 import java.util.List;
 
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
 import Dao.EmployerDao;
 import model.Employer;
 public class EmployerdaoImpl implements EmployerDao{
+
+	HibernateTemplate hTemplate;
+	
+	public HibernateTemplate gethTemplate() {
+		return hTemplate;
+	}
+
+	public void sethTemplate(HibernateTemplate hTemplate) {
+		this.hTemplate = hTemplate;
+	}
 
 	public void addEmployer(Employer er) {
 		// TODO Auto-generated method stub

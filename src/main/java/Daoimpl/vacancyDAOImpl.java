@@ -2,9 +2,19 @@ package Daoimpl;
 
 import java.util.List;
 
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
 import Dao.vaccancy_dao;
 import model.vacancy;
 public class vacancyDAOImpl implements vaccancy_dao{
+	HibernateTemplate hTemplate;
+	public HibernateTemplate gethTemplate() {
+		return hTemplate;
+	}
+
+	public void sethTemplate(HibernateTemplate hTemplate) {
+		this.hTemplate = hTemplate;
+	}
 
 	public void createVacancy(vacancy v) {
 		// TODO Auto-generated method stub

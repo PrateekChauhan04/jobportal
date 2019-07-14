@@ -1,5 +1,7 @@
 package Daoimpl;
 
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
 import Dao.candidateDao;
 import model.candidate;
 import model.education;
@@ -7,6 +9,15 @@ import model.education;
 import model.experience;
 
 public class candidateDaoImpl implements candidateDao {
+
+	HibernateTemplate hTemplate;
+	public HibernateTemplate gethTemplate() {
+		return hTemplate;
+	}
+
+	public void sethTemplate(HibernateTemplate hTemplate) {
+		this.hTemplate = hTemplate;
+	}
 
 	public void createCandidate(candidate c) {
 		// TODO Auto-generated method stub
