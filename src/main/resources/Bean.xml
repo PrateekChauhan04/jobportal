@@ -28,13 +28,7 @@
 </props>
 
 </property>
-
-
 </bean>
-
-
-
-
 <bean id="template" class="org.springframework.orm.hibernate3.HibernateTemplate">  
     <property name="sessionFactory" ref="mysessionFactory"></property>  
     </bean>
@@ -44,39 +38,43 @@
 
 </bean>
 
-<bean id="compantdaoimpl" class="Daoimpl.Companydaoimpl">
+<bean id="companydaoimpl" class="Daoimpl.Companydaoimpl">
 <property name="hTemplate" value="template"></property>
 
 </bean>
 
-<bean id="candidatedaoimpl" class="Daoimpl.Employerdaoimpl">
+<bean id="candidate_Employer_DaoImpl" class="Daoimpl.EmployerdaoImpl">
 <property name="hTemplate" value="template"></property>
 
 </bean>
 
-<bean id="candidatedaoimpl" class="Daoimpl.vacancyDAOImpl">
+<bean id="candidate_vacancy_daoImpl" class="Daoimpl.vacancyDAOImpl">
 <property name="hTemplate" value="template"></property>
 
 </bean>
 
-
-<bean id="std" class="model.candidate">
-
-</bean>
-
-<bean id="std" class="model.Company">
+<bean id="adminDaoImpl" class="Daoimpl.adminDaoImpl">
+<property name="hTemplate" value="template"></property>
 
 </bean>
 
-<bean id="std" class="model.Employer">
+<bean id="candidate" class="model.candidate">
 
 </bean>
 
-<bean id="std" class="model.vacancy">
+<bean id="Company" class="model.Company">
 
 </bean>
 
+<bean id="Employer" class="model.Employer">
 
+</bean>
 
+<bean id="vaccancy" class="model.vacancy">
 
+</bean>
+
+<bean id="admin" class="model.admin">
+
+</bean>
 </beans>
