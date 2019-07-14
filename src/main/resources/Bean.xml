@@ -8,14 +8,14 @@
 <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 <property name="url" value="jdbc:mysql://localhost:3306/testing"></property> 
 <property name="username" value="root"></property>
-<property name="password" value="Gaurav"></property>
+<property name="password" value="root"></property>
 </bean>
 
 <bean id="mysessionfactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 <property name="dataSource" ref="ds"></property>
-<property name="anotatedClasses">
+<property name="annotatedClasses">
 <list>
-<value>model.Student</value>
+<value>model.candidate</value>
 
 </list>
 </property> 
@@ -30,17 +30,16 @@
 </property>
 </bean>
 <bean id="template" class="org.springframework.orm.hibernate3.HibernateTemplate">  
-    <property name="sessionFactory" ref="mysessionFactory"></property>  
+    <property name="sessionFactory" ref="mysessionfactory"></property>  
     </bean>
 
 <bean id="candidatedaoimpl" class="Daoimpl.candidateDaoImpl">
-<property name="hTemplate" value="template"></property>
+<property name="hTemplate" ref="template"></property>
 
 </bean>
 
 <bean id="companydaoimpl" class="Daoimpl.Companydaoimpl">
 <property name="hTemplate" value="template"></property>
-
 </bean>
 
 <bean id="candidate_Employer_DaoImpl" class="Daoimpl.EmployerdaoImpl">

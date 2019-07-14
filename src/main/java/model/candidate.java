@@ -45,12 +45,12 @@ List<experience>exp=new ArrayList<experience>();
 
 @ElementCollection
 List<education>edu=new ArrayList<education>();
-
-@ManyToMany
-List<vacancy>van=new ArrayList<vacancy>();
-
-@ManyToMany
-List<Employer>emp=new ArrayList<Employer>();
+//
+//@ManyToMany
+//List<vacancy>van=new ArrayList<vacancy>();
+//
+//@ManyToMany
+//List<Employer>emp=new ArrayList<Employer>();
 
 
 
@@ -66,14 +66,14 @@ public void setExp(List<experience> exp) {
 }
 
 
-public List<vacancy> getVan() {
-	return van;
-}
-
-
-public void setVan(List<vacancy> van) {
-	this.van = van;
-}
+//public List<vacancy> getVan() {
+//	return van;
+//}
+//
+//
+//public void setVan(List<vacancy> van) {
+//	this.van = van;
+//}
 
 
 public String getName() {
