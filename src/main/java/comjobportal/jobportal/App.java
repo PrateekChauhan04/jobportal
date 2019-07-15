@@ -2,9 +2,6 @@ package comjobportal.jobportal;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.orm.hibernate3.HibernateTemplate;
-
-import Dao.candidateDao;
 import Daoimpl.candidateDaoImpl;
 import model.candidate;
 import model.education;
@@ -16,6 +13,16 @@ public class App
     {
   ApplicationContext c=new ClassPathXmlApplicationContext("Bean.xml");
   candidateDaoImpl t=(candidateDaoImpl)c.getBean("candidatedaoimpl");
+ candidate can=new candidate();
+can.setMobileNumber("2");
+t.createCandidate(can);
+  experience ex=new experience();
+  ex.setCompany("apple");
+  ex.setFromDate("1/1/1");
+  ex.setToDate("1/1/1"); 
+  education edu=new education();
+  t.addEducation(can, edu);
+    	 t.addExperience(can, ex);
     	 
     	
     }

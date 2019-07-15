@@ -6,8 +6,11 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+
+import org.hibernate.annotations.Fetch;
 
 
 @Entity
@@ -45,13 +48,13 @@ List<experience>exp=new ArrayList<experience>();
 
 @ElementCollection
 List<education>edu=new ArrayList<education>();
-//
+
 //@ManyToMany
 //List<vacancy>van=new ArrayList<vacancy>();
 //
 //@ManyToMany
 //List<Employer>emp=new ArrayList<Employer>();
-
+//
 
 
 
