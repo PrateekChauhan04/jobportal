@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
-import Dao.vaccancy_dao;
+import Dao.vacancy_dao;
 import model.vacancy;
-public class vacancyDAOImpl implements vaccancy_dao{
+public class vacancyDAOImpl implements vacancy_dao{
 	HibernateTemplate hTemplate;
 	public HibernateTemplate gethTemplate() {
 		return hTemplate;
@@ -18,12 +18,13 @@ public class vacancyDAOImpl implements vaccancy_dao{
 
 	public void createVacancy(vacancy v) {
 		// TODO Auto-generated method stub
+	 this.hTemplate.save(v);
 		
 	}
 
 	public void updateVacancy(vacancy v) {
 		// TODO Auto-generated method stub
-		
+        this.hTemplate.saveOrUpdate(v);
 	}
 
 	public void viewVacancy(vacancy v) {
@@ -33,7 +34,7 @@ public class vacancyDAOImpl implements vaccancy_dao{
 
 	public void deleteVacancy(vacancy v) {
 		// TODO Auto-generated method stub
-		
+		this.hTemplate.delete(v);
 	}
 
 	public List<vacancy> readAll() {
@@ -41,10 +42,8 @@ public class vacancyDAOImpl implements vaccancy_dao{
 		return null;
 	}
 
-	public void addVacancy(vacancy v) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 
 	
 }

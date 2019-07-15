@@ -8,9 +8,9 @@ import model.vacancy;
 
 
 
-public interface vaccancy_dao {
+public interface vacancy_dao {
 	
-	public void addVacancy (vacancy v);
+	public void createVacancy (vacancy v);
 	
 	public void updateVacancy (vacancy v);
 	
