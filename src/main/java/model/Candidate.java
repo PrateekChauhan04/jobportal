@@ -14,7 +14,7 @@ import org.hibernate.annotations.Fetch;
 
 
 @Entity
-public class candidate {
+public class Candidate {
 @Column
 String name;
 
@@ -43,11 +43,11 @@ String gender;
 String password;
 
 @ElementCollection
-List<experience>exp=new ArrayList<experience>();
+List<Experience>exp=new ArrayList<Experience>();
 
 
 @ElementCollection
-List<education>edu=new ArrayList<education>();
+List<Education>edu=new ArrayList<Education>();
 
 //@ManyToMany
 //List<vacancy>van=new ArrayList<vacancy>();
@@ -59,12 +59,12 @@ List<education>edu=new ArrayList<education>();
 
 
 
-public List<experience> getExp() {
+public List<Experience> getExp() {
 	return exp;
 }
 
 
-public void setExp(List<experience> exp) {
+public void setExp(List<Experience> exp) {
 	this.exp = exp;
 }
 
@@ -181,12 +181,12 @@ public void setPassword(String password) {
 
 
 
-public List<education> getEdu() {
+public List<Education> getEdu() {
 	return edu;
 }
 
 
-public void setEdu(List<education> edu) {
+public void setEdu(List<Education> edu) {
 	this.edu = edu;
 }
 

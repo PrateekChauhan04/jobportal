@@ -26,7 +26,7 @@ public class vacancy {
 	@ManyToOne
 	Employer emp;
 	@ManyToMany (mappedBy = "van")
-	List<candidate>can=new ArrayList<candidate>();
+	List<Candidate>can=new ArrayList<Candidate>();
 	
 	@Column(name="openning_date")
 	String opening_date;

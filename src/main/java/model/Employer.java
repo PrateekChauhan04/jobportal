@@ -28,7 +28,7 @@ public class Employer {
 	List<vacancy> vaccancies=new ArrayList<vacancy>();
 	
 	@ManyToMany(mappedBy = "emp")
-    List<candidate> c = new ArrayList<candidate>();
+    List<Candidate> c = new ArrayList<Candidate>();
     
 	
 	public int getEId() {

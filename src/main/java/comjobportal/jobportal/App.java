@@ -2,25 +2,25 @@ package comjobportal.jobportal;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import Daoimpl.candidateDaoImpl;
-import model.candidate;
-import model.education;
-import model.experience;
+import Daoimpl.CandidateDaoImpl;
+import model.Candidate;
+import model.Education;
+import model.Experience;
 
 public class App 
 {
     public static void main( String[] args )
     {
   ApplicationContext c=new ClassPathXmlApplicationContext("Bean.xml");
-  candidateDaoImpl t=(candidateDaoImpl)c.getBean("candidatedaoimpl");
- candidate can=new candidate();
+  CandidateDaoImpl t=(CandidateDaoImpl)c.getBean("candidatedaoimpl");
+ Candidate can=new Candidate();
 can.setMobileNumber("2");
 t.createCandidate(can);
-  experience ex=new experience();
+  Experience ex=new Experience();
   ex.setCompany("apple");
   ex.setFromDate("1/1/1");
   ex.setToDate("1/1/1"); 
-  education edu=new education();
+  Education edu=new Education();
   t.addEducation(can, edu);
     	 t.addExperience(can, ex);
     	 

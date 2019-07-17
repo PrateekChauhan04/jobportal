@@ -4,13 +4,13 @@ package Daoimpl;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
-import Dao.candidateDao;
-import model.candidate;
-import model.education;
+import Dao.CandidateDao;
+import model.Candidate;
+import model.Education;
 
-import model.experience;
+import model.Experience;
 
-public class candidateDaoImpl implements candidateDao {
+public class CandidateDaoImpl implements CandidateDao {
 
     
 	public HibernateTemplate hTemplate;
@@ -25,18 +25,18 @@ public class candidateDaoImpl implements candidateDao {
 	
 	}
 
-	public void createCandidate(candidate c) {
+	public void createCandidate(Candidate c) {
 	 this.hTemplate.save(c);
 	 System.out.println("candidate added");
 	}
 
-	public void updateCandidate(candidate c) {
+	public void updateCandidate(Candidate c) {
 	
 		this.hTemplate.update(c);
 		
 	}
 
-	public void addExperience(candidate candidate, experience ex) {
+	public void addExperience(Candidate candidate, Experience ex) {
 		
 	
 	  candidate.getExp().add(ex);
@@ -44,7 +44,7 @@ public class candidateDaoImpl implements candidateDao {
 	 this.hTemplate.update(candidate);
 	}
 
-	public void addEducation(candidate candidate, education ex) {
+	public void addEducation(Candidate candidate, Education ex) {
 
 		candidate.getEdu().add(ex);
 	  
@@ -53,7 +53,7 @@ public class candidateDaoImpl implements candidateDao {
 
 
 
-	public void deleteCandidate(candidate candidate) {
+	public void deleteCandidate(Candidate candidate) {
 		
 
 		this.hTemplate.delete(candidate);

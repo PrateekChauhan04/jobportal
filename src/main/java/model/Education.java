@@ -13,7 +13,7 @@ import javax.persistence.Id;
 
 
 @Embeddable
-public class education {
+public class Education {
 	@Column
 	String course;
 	@Column
