@@ -15,8 +15,8 @@
 <property name="dataSource" ref="ds"></property>
 <property name="annotatedClasses">
 <list>
-<value>model.candidate</value>
-<value>model.experience</value>
+<value>model.Candidate</value>
+<value>model.Experience</value>
 
 </list>
 </property> 
@@ -34,7 +34,7 @@
     <property name="sessionFactory" ref="mysessionfactory"></property>  
     </bean>
 
-<bean id="candidatedaoimpl" class="Daoimpl.candidateDaoImpl">
+<bean id="candidatedaoimpl" class="Daoimpl.CandidateDaoImpl">
 <property name="hTemplate" ref="template"></property>
 
 </bean>
