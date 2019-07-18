@@ -8,7 +8,7 @@ import model.vacancy;
 
 
 
-public interface vacancy_dao {
+public interface VacancyDao {
 	
 	public void createVacancy (vacancy v);
 	
