@@ -5,9 +5,14 @@ import java.util.List;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
 
+
 import Dao.vacancy_dao;
 import model.vacancy;
 public class VacancyDAOImpl implements vacancy_dao{
+import Dao.VacancyDao;
+import model.vacancy;
+public class VacancyDaoimpl implements VacancyDao{
+
 	HibernateTemplate hTemplate;
 	public HibernateTemplate gethTemplate() {
 		return hTemplate;
@@ -17,30 +22,30 @@ public class VacancyDAOImpl implements vacancy_dao{
 		this.hTemplate = hTemplate;
 	}
 
-	public void createVacancy(vacancy v) {
+	public void createVacancy(vacancy vacancy) {
 		// TODO Auto-generated method stub
-	 this.hTemplate.save(v);
+	 this.hTemplate.save(vacancy);
 		
 	}
 
-	public void updateVacancy(vacancy v) {
+	public void updateVacancy(vacancy vacancy) {
 		// TODO Auto-generated method stub
-        this.hTemplate.saveOrUpdate(v);
+        this.hTemplate.update(vacancy);
 	}
 
-	public void viewVacancy(vacancy v) {
+	public void viewVacancy(vacancy vacancy) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void deleteVacancy(vacancy v) {
+	public void deleteVacancy(vacancy vacancy) {
 		// TODO Auto-generated method stub
-		this.hTemplate.delete(v);
+		this.hTemplate.delete(vacancy);
 	}
 
 	public List<vacancy> readAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.hTemplate.find("from Vacancy");
 	}
 
 	

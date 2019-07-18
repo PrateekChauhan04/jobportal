@@ -1,11 +1,27 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Company {
+	@Column
+	String Email;
+	@Column
+	int contact_no;
+	@Id
+	@Column
+	int Registration_no;
+	@Column
+	String web_address;
+	@Column
+    String Scale;
 	@Column
 	String Company_name;
 	public String getCompany_name() {
@@ -44,15 +60,12 @@ public class Company {
 	public void setScale(String scale) {
 		Scale = scale;
 	}
-	@Column
-	String Email;
-	@Column
-	int contact_no;
-	@Id
-	@Column
-	int Registration_no;
-	@Column
-	String web_address;
-	@Column
-    String Scale;
+	
+
+	@OneToMany(mappedBy="Company")
+	List<Employer> Employer = new ArrayList<Employer>();
+
+	@ManyToMany
+	admin a; 
+	
 }
