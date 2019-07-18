@@ -24,7 +24,7 @@ public class SkillsDaoImpl implements SkillsDao {
 	}
 
 	public List<Skills> readAllSkills() {
-		return this.hibernateTemplate.find("from skills");
+		return this.hibernateTemplate.find("from Skills");
 	}
 
 	public void updateSkill(Skills s) {
