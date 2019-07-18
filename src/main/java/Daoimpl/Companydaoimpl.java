@@ -1,6 +1,6 @@
 package Daoimpl;
 
-
+import org.springframework.orm.hibernate3.HibernateTemplate;
 
 	import java.util.List;
 
@@ -31,15 +31,10 @@ package Daoimpl;
 			
 		}
 
-		public void saveOrupdateComapany(Company c) {
-
-			hTemplate.update( c);
-	                      
-		}
-
-		public void deleteComany(Company c) {
+		
+		public void deleteCompany(Company c) {
 			
-		hTemplate.delete(c);
+		this.hTemplate.delete(c);
 		}
 	       public List<Company> readAll() {
 			
@@ -48,18 +43,12 @@ package Daoimpl;
 		}
 
 		public void updateCompany(Company c) {
-			// TODO Auto-generated method stub
+			
+			this.hTemplate.update(c);
 			
 		}
 
-		public void deleteCompany(Company c) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-
-		
-
+	
 
 	}
 

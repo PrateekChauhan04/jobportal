@@ -3,7 +3,9 @@ package comjobportal.jobportal;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import Daoimpl.CandidateDaoImpl;
+import Daoimpl.Companydaoimpl;
 import model.Candidate;
+import model.Company;
 import model.Education;
 import model.Experience;
 
@@ -23,7 +25,11 @@ t.createCandidate(can);
   Education edu=new Education();
   t.addEducation(can, edu);
     	 t.addExperience(can, ex);
+    	 Companydaoimpl cdimpl =(Companydaoimpl)c.getBean("companydaoimpl");
+    	
+    	 Company c1=new Company();
     	 
+    	 cdimpl.createCompany(c1);
     	
     }
 }
