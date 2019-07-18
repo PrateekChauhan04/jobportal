@@ -4,9 +4,10 @@ import java.util.List;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
-import Dao.Vacancy_dao;
+
+import Dao.vacancy_dao;
 import model.vacancy;
-public class VacancyDAOImpl implements Vacancy_dao{
+public class VacancyDAOImpl implements vacancy_dao{
 	HibernateTemplate hTemplate;
 	public HibernateTemplate gethTemplate() {
 		return hTemplate;

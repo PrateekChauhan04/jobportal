@@ -5,14 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class admin {
+public class Admin {
 	
 	@Id
-	private int A_id;
+	public int A_id;
 	@Column
-	private String email;
+	public String email;
 	@Column
-	private String password;
+	public String password;
 	
 	
 	public int getA_id() {
@@ -33,7 +33,7 @@ public class admin {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public admin() {
+	public Admin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

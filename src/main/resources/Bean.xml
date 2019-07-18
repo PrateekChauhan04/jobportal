@@ -18,6 +18,7 @@
 <value>model.Candidate</value>
 <value>model.Experience</value>
 <value>model.Company</value>
+<value>model.Admin</value>
 </list>
 </property> 
 
@@ -40,6 +41,11 @@
 </bean>
 
 <bean id="companydaoimpl" class="Daoimpl.Companydaoimpl">
+<property name="hTemplate" ref="template"></property>
+
+</bean>
+
+<bean id="admindaoimpl" class="Daoimpl.AdminDaoImpl">
 <property name="hTemplate" ref="template"></property>
 
 </bean>

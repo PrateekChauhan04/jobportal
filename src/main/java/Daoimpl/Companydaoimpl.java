@@ -4,10 +4,6 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 
 	import java.util.List;
 
-
-	import org.springframework.*;
-    import org.springframework.orm.hibernate3.HibernateTemplate;
-
     import Dao.CompanyDao;
 	import model.Company;
 	

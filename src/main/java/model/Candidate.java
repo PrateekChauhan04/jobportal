@@ -48,13 +48,13 @@ List<Experience>exp=new ArrayList<Experience>();
 
 @ElementCollection
 List<Education>edu=new ArrayList<Education>();
-
+//
 //@ManyToMany
 //List<vacancy>van=new ArrayList<vacancy>();
 //
 //@ManyToMany
 //List<Employer>emp=new ArrayList<Employer>();
-//
+
 
 
 
@@ -68,7 +68,7 @@ public void setExp(List<Experience> exp) {
 	this.exp = exp;
 }
 
-
+//
 //public List<vacancy> getVan() {
 //	return van;
 //}
