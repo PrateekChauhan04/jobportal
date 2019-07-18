@@ -66,6 +66,6 @@ public class Company {
 	List<Employer> Employer = new ArrayList<Employer>();
 
 	@ManyToMany
-	admin a; 
+	Admin a; 
 	
 }

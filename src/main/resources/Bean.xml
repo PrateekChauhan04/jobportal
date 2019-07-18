@@ -19,6 +19,7 @@
 <value>model.Experience</value>
 <value>model.Company</value>
 <value>model.Admin</value>
+<value>model.vacancy</value>
 </list>
 </property> 
 
@@ -46,6 +47,11 @@
 </bean>
 
 <bean id="admindaoimpl" class="Daoimpl.AdminDaoImpl">
+<property name="hTemplate" ref="template"></property>
+
+</bean>
+
+<bean id="vacancydaoimpl" class="Daoimpl.VacancyDaoimpl">
 <property name="hTemplate" ref="template"></property>
 
 </bean>

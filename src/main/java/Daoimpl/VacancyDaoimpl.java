@@ -6,9 +6,9 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 
 
 
-import Dao.vacancy_dao;
+
 import model.vacancy;
-public class VacancyDAOImpl implements vacancy_dao{
+
 import Dao.VacancyDao;
 import model.vacancy;
 public class VacancyDaoimpl implements VacancyDao{
