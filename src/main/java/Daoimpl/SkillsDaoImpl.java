@@ -9,30 +9,30 @@ import model.Skills;
 
 public class SkillsDaoImpl implements SkillsDao {
 	
-	private HibernateTemplate hibernateTemplate;
+	private HibernateTemplate hTemplate;
 	
 	public HibernateTemplate getHibernateTemplate() {
-		return hibernateTemplate;
+		return hTemplate;
 	}
 
 	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-		this.hibernateTemplate = hibernateTemplate;
+		this.hTemplate = hibernateTemplate;
 	}
 
 	public void addSkill(Skills s) {
-		this.hibernateTemplate.save(s);
+		this.hTemplate.save(s);
 	}
 
 	public List<Skills> readAllSkills() {
-		return this.hibernateTemplate.find("from Skills");
+		return this.hTemplate.find("from Skills");
 	}
 
 	public void updateSkill(Skills s) {
-		this.hibernateTemplate.update(s);
+		this.hTemplate.update(s);
 	}
 
 	public void deleteSkill(Skills s) {
-		this.hibernateTemplate.delete(s);
+		this.hTemplate.delete(s);
 	}
 
 }
