@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
-import Dao.skillsDao;
-import model.skills;
+import Dao.SkillsDao;
+import model.Skills;
 
-public class skillsDaoImpl implements skillsDao {
+public class SkillsDaoImpl implements SkillsDao {
 	
 	private HibernateTemplate hibernateTemplate;
 	
@@ -19,19 +19,19 @@ public class skillsDaoImpl implements skillsDao {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
-	public void addSkill(skills s) {
+	public void addSkill(Skills s) {
 		this.hibernateTemplate.save(s);
 	}
 
-	public List<skills> readAllSkills() {
+	public List<Skills> readAllSkills() {
 		return this.hibernateTemplate.find("from skills");
 	}
 
-	public void updateSkill(skills s) {
+	public void updateSkill(Skills s) {
 		this.hibernateTemplate.update(s);
 	}
 
-	public void deleteSkill(skills s) {
+	public void deleteSkill(Skills s) {
 		this.hibernateTemplate.delete(s);
 	}
 

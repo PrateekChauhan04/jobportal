@@ -11,7 +11,7 @@ import javax.persistence.ManyToMany;
 
 
 @Entity
-public class skills {
+public class Skills {
 
 	@Id
 	int skillId;
@@ -68,7 +68,7 @@ public class skills {
 		this.skill = skill;
 	}
 
-	public skills() {
+	public Skills() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
