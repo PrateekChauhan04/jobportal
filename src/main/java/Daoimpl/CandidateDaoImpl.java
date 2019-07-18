@@ -62,8 +62,8 @@ public class CandidateDaoImpl implements CandidateDao {
 	}
 
 	public List <Candidate> getAllCandidate() {
-		List<Candidate> can=this.hTemplate.find("from candidate");
-		return can;
+		
+		return this.hTemplate.find("from Candidate");
 	}
 
 
