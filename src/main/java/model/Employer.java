@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -30,6 +31,8 @@ public class Employer {
 	@ManyToMany(mappedBy = "emp")
     List<Candidate> c = new ArrayList<Candidate>();
     
+	@ManyToOne
+	Company company;
 	
 	public int getEId() {
 		return EId;
