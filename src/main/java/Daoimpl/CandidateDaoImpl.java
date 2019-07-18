@@ -2,6 +2,8 @@ package Daoimpl;
 
 
 
+import java.util.List;
+
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
 import Dao.CandidateDao;
@@ -57,6 +59,11 @@ public class CandidateDaoImpl implements CandidateDao {
 		
 
 		this.hTemplate.delete(candidate);
+	}
+
+	public List <Candidate> getAllCandidate() {
+		List<Candidate> can=this.hTemplate.find("from candidate");
+		return can;
 	}
 
 
