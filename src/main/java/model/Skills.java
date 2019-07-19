@@ -25,7 +25,7 @@ public class Skills {
 	@Column
 	String skill_level;
 	
-	@ManyToMany(mappedBy="skill")
+	@ManyToMany
 	List<vacancy> skill = new ArrayList<vacancy>();
 
 	public int getSkillId() {

@@ -10,13 +10,12 @@ import model.Skills;
 public class SkillsDaoImpl implements SkillsDao {
 	
 	private HibernateTemplate hTemplate;
-	
-	public HibernateTemplate getHibernateTemplate() {
+	public HibernateTemplate gethTemplate() {
 		return hTemplate;
 	}
 
-	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-		this.hTemplate = hibernateTemplate;
+	public void sethTemplate(HibernateTemplate hTemplate) {
+		this.hTemplate = hTemplate;
 	}
 
 	public void addSkill(Skills s) {

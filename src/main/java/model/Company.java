@@ -62,10 +62,22 @@ public class Company {
 	}
 	
 
-	@OneToMany(mappedBy="Company")
+	@OneToMany
 	List<Employer> Employer = new ArrayList<Employer>();
 
 	@ManyToMany
-	Admin a; 
+	List<Admin> admin=new ArrayList<Admin>();
+	public List<Employer> getEmployer() {
+		return Employer;
+	}
+	public void setEmployer(List<Employer> employer) {
+		Employer = employer;
+	}
+	public List<Admin> getAdmin() {
+		return admin;
+	}
+	public void setAdmin(List<Admin> admin) {
+		this.admin = admin;
+	}
 	
 }

@@ -1,8 +1,12 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Admin {
@@ -37,6 +41,15 @@ public class Admin {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+	@ManyToMany(mappedBy="admin")
+	List<Company> company=new ArrayList<Company>();
+
+
+	public List<Company> getCompany() {
+		return company;
+	}
+	public void setCompany(List<Company> company) {
+		this.company = company;
+	}
 
 }

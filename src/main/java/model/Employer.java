@@ -26,13 +26,33 @@ public class Employer {
 	private String companyName;
 	
 	@OneToMany (mappedBy = "emp")
-	List<vacancy> vaccancies=new ArrayList<vacancy>();
+	List<vacancy> vaccancy=new ArrayList<vacancy>();
 	
+	public List<vacancy> getVaccancy() {
+		return vaccancy;
+	}
+	public void setVaccancy(List<vacancy> vaccancy) {
+		this.vaccancy = vaccancy;
+	}
+	
+	public Company getCompany1() {
+		return company1;
+	}
+	public void setCompany1(Company company1) {
+		this.company1 = company1;
+	}
+
 	@ManyToMany(mappedBy = "emp")
-    List<Candidate> c = new ArrayList<Candidate>();
+    List<Candidate> candidates = new ArrayList<Candidate>();
     
+	public List<Candidate> getCandidates() {
+		return candidates;
+	}
+	public void setCandidates(List<Candidate> candidates) {
+		this.candidates = candidates;
+	}
 	@ManyToOne
-	Company company;
+	Company company1;
 	
 	public int getEId() {
 		return EId;

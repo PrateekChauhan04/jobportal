@@ -25,9 +25,29 @@ public class vacancy {
 	String experience_requirement;
 	@ManyToOne
 	Employer emp;
+	@ManyToMany
+	List<Skills> skills= new ArrayList<Skills>();
+	public List<Skills> getSkills() {
+		return skills;
+	}
+	public void setSkills(List<Skills> skills) {
+		this.skills = skills;
+	}
+	public Employer getEmp() {
+		return emp;
+	}
+	public void setEmp(Employer emp) {
+		this.emp = emp;
+	}
 	@ManyToMany (mappedBy = "van")
-	List<Candidate>can=new ArrayList<Candidate>();
+	List<Candidate>candidate=new ArrayList<Candidate>();
 	
+	public List<Candidate> getCandidate() {
+		return candidate;
+	}
+	public void setCandidate(List<Candidate> candidate) {
+		this.candidate = candidate;
+	}
 	@Column(name="openning_date")
 	String opening_date;
 	

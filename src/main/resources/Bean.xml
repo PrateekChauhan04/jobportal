@@ -6,9 +6,9 @@
 
 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-<property name="url" value="jdbc:mysql://localhost:3306/testing"></property> 
+<property name="url" value="jdbc:mysql://localhost:3306/jobportal"></property> 
 <property name="username" value="root"></property>
-<property name="password" value="prateek"></property>
+<property name="password" value="Gaurav"></property>
 </bean>
 
 <bean id="mysessionfactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
@@ -20,6 +20,9 @@
 <value>model.Company</value>
 <value>model.Admin</value>
 <value>model.vacancy</value>
+<value>model.Skills</value>
+<value>model.Employer</value>
+
 </list>
 </property> 
 
@@ -41,6 +44,15 @@
 
 </bean>
 
+
+<bean id="skillsdaoimpl" class="Daoimpl.SkillsDaoImpl">
+<property name="hTemplate" ref="template"></property>
+
+</bean>
+
+
+
+
 <bean id="companydaoimpl" class="Daoimpl.Companydaoimpl">
 <property name="hTemplate" ref="template"></property>
 
@@ -55,5 +67,55 @@
 <property name="hTemplate" ref="template"></property>
 
 </bean>
+<bean id="employerdaoimpl" class="Daoimpl.EmployerdaoImpl">
+<property name="hTemplate" ref="template"></property>
+
+</bean>
+
+<bean id="candidate" class="model.Candidate">
+
+
+</bean>
+
+<bean id="company" class="model.Company">
+
+
+</bean>
+
+<bean id="admin" class="model.Admin">
+
+</bean>
+
+<bean id="vacancy" class="model.vacancy">
+
+
+</bean>
+
+<bean id="employer" class="model.Employer">
+
+
+</bean>
+
+
+<bean id="skills" class="model.Skills">
+
+
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </beans>
