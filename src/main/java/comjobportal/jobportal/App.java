@@ -45,6 +45,7 @@ public class App
         Employer employer =(Employer)context.getBean("employer");
         Education education = new Education();
         Experience experience=new Experience();
+       
         candidate.setName("Gaurav");
         candidate.setAge(20);
         candidate.setCountry("india");
@@ -58,28 +59,31 @@ public class App
         
         education.setBranch("cs");
         education.setCourse("database");
+        
         experience.setCompany("ikjfahouih");
         experience.setToDate("646");
         experience.setFromDate("65964");
 
         candidate.getEdu().add(education);
         candidate.getExp().add(experience);
-       candidate.getVan().add(vacancy); 
+        candidate.getVan().add(vacancy); 
         candidate.getEmp().add(employer);
+        
         employer.setCompanyName("asdhj");
-        employer.setContactNo("5886");
-        employer.setEmpId(1);
+        employer.setContactNumber("5886");
+        employer.setEId(1);
         employer.setEmail("asdfj");
         employer.setLocation("adshoijf");
         employer.setName("fsad");
-        employer.getVaccancy().add(vacancy);
-         employer.getCandidates().add(candidate);
+        
+        employer.getCandidates().add(candidate);
       
       skills.setField("fd");
       skills.setSkill_level("wsdh");
       skills.setSkill_name("frds");
       skills.setSkillId(1);
-      skills.getVacancies().add(vacancy);     
+      skills.getVacancies().add(vacancy);
+      
         vacancy.setExperience_requirement("58");
         vacancy.setLast_date_to_apply("69");
         vacancy.setNo_of_vaccancy(65);
@@ -87,8 +91,8 @@ public class App
         vacancy.setPayment_scale(45.5f);
         vacancy.setVaccancy_id(1);
         vacancy.getCandidate().add(candidate);
-        vacancy.getEmp();
-      
+        vacancy.setEmp(employer);
+        employer.getVaccancy().add(vacancy); 
         vacancy.getSkills().add(skills);
        
        
@@ -97,39 +101,24 @@ public class App
        company.setEmail("fsaduh");
        company.setRegistration_no(1);
        company.setScale("dfasf");
-       company.setWeb_address("fasd");
-
-       company.getAdmin().add(admin);
-       company.getEmployer().add(employer);
+       company.setWeb_address("fasd");     
+      // company.getAdmin().add(admin);
        
-       admin.setA_id(1);
+       employer.setCompany1(company);
+//       company.getEmployer().add(employer);
+       
+      admin.setA_id(1);
       admin.setEmail("fadshj");
       admin.setPassword("dfsjh");
-      admin.getCompany().add(company);
-      candidateDao.createCandidate(candidate);
+     // admin.getCompany().add(company);
 
-      skillsDao.addSkill(skills);
-     
-      vacancyDao.createVacancy(vacancy);
-   
-      employerDao.addEmployer(employer);
-    	
-     
       
-       
-  
-        adminDao.createadmin(admin);
-        companyDao.createCompany(company);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+      candidateDao.createCandidate(candidate);
+      skillsDao.addSkill(skills);
+      companyDao.createCompany(company);
+      employerDao.addEmployer(employer);
+      vacancyDao.createVacancy(vacancy);
+      adminDao.createadmin(admin);  
         
     }
 }

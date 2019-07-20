@@ -24,17 +24,17 @@ public class EmployerdaoImpl implements EmployerDao{
 
 	public void updateEmployer(Employer er) {
 		// TODO Auto-generated method stub
-		this.hTemplate.update(er);
+		
 	}
 
 	public void deleteEmployer(Employer er) {
 		// TODO Auto-generated method stub
-		this.hTemplate.delete(er);
+		
 	}
 
 	public List<Employer> viewEmployer() {
 		// TODO Auto-generated method stub
-		return this.hTemplate.find("from employer");
+		return null;
 	}
 	
 

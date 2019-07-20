@@ -39,7 +39,7 @@ public class vacancy {
 	public void setEmp(Employer emp) {
 		this.emp = emp;
 	}
-	@ManyToMany 
+	@ManyToMany
 	List<Candidate>candidate=new ArrayList<Candidate>();
 	
 	public List<Candidate> getCandidate() {
