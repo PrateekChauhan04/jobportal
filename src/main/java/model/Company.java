@@ -12,53 +12,53 @@ import javax.persistence.OneToMany;
 @Entity
 public class Company {
 	@Column
-	String Email;
+	String email;
 	@Column
-	int contact_no;
+	int contactNo;
 	@Id
 	@Column
-	int Registration_no;
+	int registrationNo;
 	@Column
-	String web_address;
+	String webAddress;
 	@Column
-    String Scale;
+    String scale;
 	@Column
-	String Company_name;
-	public String getCompany_name() {
-		return Company_name;
+	String companyName;
+	public String getcompanyName() {
+		return companyName;
 	}
-	public void setCompany_name(String company_name) {
-		Company_name = company_name;
+	public void setcompanyName(String companyName) {
+		companyName = companyName;
 	}
-	public String getEmail() {
-		return Email;
+	public String getemail() {
+		return email;
 	}
-	public void setEmail(String email) {
-		Email = email;
+	public void setemail(String email) {
+		email = email;
 	}
-	public int getContact_no() {
-		return contact_no;
+	public int getcontactNo() {
+		return contactNo;
 	}
-	public void setContact_no(int contact_no) {
-		this.contact_no = contact_no;
+	public void setcontactNo(int contactNo) {
+		this.contactNo = contactNo;
 	}
-	public int getRegistration_no() {
-		return Registration_no;
+	public int getregistrationNo() {
+		return registrationNo;
 	}
-	public void setRegistration_no(int registration_no) {
-		Registration_no = registration_no;
+	public void setregistrationNo(int registrationNo) {
+		registrationNo = registrationNo;
 	}
-	public String getWeb_address() {
-		return web_address;
+	public String getwebAddress() {
+		return webAddress;
 	}
-	public void setWeb_address(String web_address) {
-		this.web_address = web_address;
+	public void setwebAddress(String webAddress) {
+		this.webAddress = webAddress;
 	}
-	public String getScale() {
-		return Scale;
+	public String getscale() {
+		return scale;
 	}
-	public void setScale(String scale) {
-		Scale = scale;
+	public void setscale(String scale) {
+		scale = scale;
 	}
 	
 
