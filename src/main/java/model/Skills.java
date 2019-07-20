@@ -20,24 +20,25 @@ public class Skills {
 	String field;
 	
 	@Column
-	String skill_name;
+	String skillName;
 	
 	@Column
-	String skill_level;
+	String skillLevel;
 	
 	@ManyToMany(mappedBy="skills")
-	List<vacancy> vacancies = new ArrayList<vacancy>();
-
-	public int getSkillId() {
-		return skillId;
-	}
-
-	public List<vacancy> getVacancies() {
+	List<Vacancy> vacancies = new ArrayList<Vacancy>();
+	
+	public List<Vacancy> getVacancies() {
 		return vacancies;
 	}
 
-	public void setVacancies(List<vacancy> vacancies) {
+	public void setVacancies(List<Vacancy> vacancies) {
 		this.vacancies = vacancies;
+	}
+
+	
+	public int getSkillId() {
+		return skillId;
 	}
 
 	public void setSkillId(int skillId) {
@@ -52,20 +53,20 @@ public class Skills {
 		this.field = field;
 	}
 
-	public String getSkill_name() {
-		return skill_name;
+	public String getSkillName() {
+		return skillName;
 	}
 
-	public void setSkill_name(String skill_name) {
-		this.skill_name = skill_name;
+	public void setSkillName(String skillName) {
+		this.skillName = skillName;
 	}
 
-	public String getSkill_level() {
-		return skill_level;
+	public String getSkillLevel() {
+		return skillLevel;
 	}
 
-	public void setSkill_level(String skill_level) {
-		this.skill_level = skill_level;
+	public void setSkillLevel(String skillLevel) {
+		this.skillLevel = skillLevel;
 	}
 
 	public Skills() {
