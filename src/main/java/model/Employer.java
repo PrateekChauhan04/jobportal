@@ -13,8 +13,7 @@ import javax.persistence.OneToMany;
 public class Employer {
 	@Id
 	@Column
-	private int empId
-;
+	private int empId;
 	@Column
 	private String name;
 	@Column
