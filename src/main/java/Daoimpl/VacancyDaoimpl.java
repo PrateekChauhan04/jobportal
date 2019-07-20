@@ -7,10 +7,10 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 
 
 
-import model.vacancy;
+import model.Vacancy;
 
 import Dao.VacancyDao;
-import model.vacancy;
+import model.Vacancy;
 public class VacancyDaoimpl implements VacancyDao{
 
 	HibernateTemplate hTemplate;
@@ -22,28 +22,28 @@ public class VacancyDaoimpl implements VacancyDao{
 		this.hTemplate = hTemplate;
 	}
 
-	public void createVacancy(vacancy vacancy) {
+	public void createVacancy(Vacancy vacancy) {
 		// TODO Auto-generated method stub
 	 this.hTemplate.save(vacancy);
 		
 	}
 
-	public void updateVacancy(vacancy vacancy) {
+	public void updateVacancy(Vacancy vacancy) {
 		// TODO Auto-generated method stub
         this.hTemplate.update(vacancy);
 	}
 
-	public void viewVacancy(vacancy vacancy) {
+	public void viewVacancy(Vacancy vacancy) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void deleteVacancy(vacancy vacancy) {
+	public void deleteVacancy(Vacancy vacancy) {
 		// TODO Auto-generated method stub
 		this.hTemplate.delete(vacancy);
 	}
 
-	public List<vacancy> readAll() {
+	public List<Vacancy> readAll() {
 		// TODO Auto-generated method stub
 		return this.hTemplate.find("from Vacancy");
 	}

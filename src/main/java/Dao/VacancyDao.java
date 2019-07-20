@@ -4,21 +4,21 @@ package Dao;
 
 import java.util.List;
 
-import model.vacancy;
+import model.Vacancy;
 
 
 
 public interface VacancyDao {
 	
-	public void createVacancy (vacancy v);
+	public void createVacancy (Vacancy vacancy);
 	
-	public void updateVacancy (vacancy v);
+	public void updateVacancy (Vacancy vacancy);
 	
-	public void viewVacancy (vacancy v);
+	public void viewVacancy (Vacancy vacancy);
 	
 	
-	public void deleteVacancy (vacancy v);
+	public void deleteVacancy (Vacancy vacancy);
 	
-	public List<vacancy> readAll();
+	public List<Vacancy> readAll();
 	
 }
