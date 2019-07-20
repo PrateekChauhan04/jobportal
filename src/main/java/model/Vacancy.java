@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 public class Vacancy {
 	
 	@Column
-	String openningDate;
+	String openingDate;
 	
 	@Column
 	String lastDateToApply;
@@ -52,11 +52,11 @@ public class Vacancy {
 	public void setCandidate(List<Candidate> candidate) {
 		this.candidate = candidate;
 	}
-	public String getOpenningDate() {
-		return openningDate;
+	public String getOpeningDate() {
+		return openingDate;
 	}
-	public void setOpenningDate(String openningDate) {
-		this.openningDate = openningDate;
+	public void setOpeningDate(String openingDate) {
+		this.openingDate = openingDate;
 	}
 	public String getLastDateToApply() {
 		return lastDateToApply;

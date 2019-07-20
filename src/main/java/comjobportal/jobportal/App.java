@@ -18,7 +18,7 @@ import model.Education;
 import model.Employer;
 import model.Experience;
 import model.Skills;
-import model.vacancy;
+import model.Vacancy;
 import model.Admin;
 
 public class App 
@@ -40,7 +40,7 @@ public class App
         Company company  =(Company)context.getBean("company");
        Admin admin  =(Admin)context.getBean("admin");
              
-         vacancy vacancy  =(vacancy)context.getBean("vacancy");
+         Vacancy vacancy  =(Vacancy)context.getBean("vacancy");
         Candidate candidate  =(Candidate)context.getBean("candidate");
         Employer employer =(Employer)context.getBean("employer");
         Education education = new Education();
@@ -84,12 +84,12 @@ public class App
       skills.setSkillId(1);
       skills.getVacancies().add(vacancy);
       
-        vacancy.setExperience_requirement("58");
-        vacancy.setLast_date_to_apply("69");
-        vacancy.setNo_of_vaccancy(65);
-        vacancy.setOpening_date("564");
-        vacancy.setPayment_scale(45.5f);
-        vacancy.setVaccancy_id(1);
+        vacancy.setExperienceRequirement("58");
+        vacancy.setLastDateToApply("69");
+        vacancy.setNoOfVacancy(65);
+        vacancy.setOpeningDate("564");
+        vacancy.setPaymentScale(45.5f);
+        vacancy.setVacancyId(1);
         vacancy.getCandidate().add(candidate);
         vacancy.setEmp(employer);
         employer.getVaccancy().add(vacancy); 
