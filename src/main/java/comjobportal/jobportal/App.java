@@ -67,8 +67,8 @@ public class App
        candidate.getVan().add(vacancy); 
         candidate.getEmp().add(employer);
         employer.setCompanyName("asdhj");
-        employer.setContactNumber("5886");
-        employer.setEId(1);
+        employer.setContactNo("5886");
+        employer.setEmpId(1);
         employer.setEmail("asdfj");
         employer.setLocation("adshoijf");
         employer.setName("fsad");
