@@ -13,13 +13,14 @@ import javax.persistence.OneToMany;
 public class Employer {
 	@Id
 	@Column
-	private int EId;
+	private int empId
+;
 	@Column
 	private String name;
 	@Column
 	private String email;
 	@Column
-	private String contactNumber;
+	private String contactNo;
 	@Column
 	private String location;
 	@Column
@@ -54,12 +55,6 @@ public class Employer {
 	@ManyToOne
 	Company company1;
 	
-	public int getEId() {
-		return EId;
-	}
-	public void setEId(int eId) {
-		EId = eId;
-	}
 	public String getName() {
 		return name;
 	}
@@ -72,11 +67,18 @@ public class Employer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getContactNumber() {
-		return contactNumber;
+	
+	public int getEmpId() {
+		return empId;
 	}
-	public void setContactNumber(String contactNumber) {
-		this.contactNumber = contactNumber;
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getContactNo() {
+		return contactNo;
+	}
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
 	}
 	public String getLocation() {
 		return location;
