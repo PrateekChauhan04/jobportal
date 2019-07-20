@@ -42,7 +42,7 @@ public class Employer {
 		this.company1 = company1;
 	}
 
-	@ManyToMany(mappedBy = "emp")
+	@ManyToMany
     List<Candidate> candidates = new ArrayList<Candidate>();
     
 	public List<Candidate> getCandidates() {

@@ -8,7 +8,7 @@
 <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 <property name="url" value="jdbc:mysql://localhost:3306/jobportal"></property> 
 <property name="username" value="root"></property>
-<property name="password" value="Gaurav"></property>
+<property name="password" value="root"></property>
 </bean>
 
 <bean id="mysessionfactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">

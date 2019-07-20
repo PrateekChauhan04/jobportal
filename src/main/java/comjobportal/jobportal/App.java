@@ -50,32 +50,36 @@ public class App
         candidate.setCountry("india");
         candidate.setEmail("hiakfhuih");
         candidate.setGender("Male");
-        candidate.setMobileNumber("646456");
+        candidate.setMobileNumber("6464");
         candidate.setPassword("asdhfj");
         candidate.setPinCode(6564);
         candidate.setResume("dasf");
         candidate.setState("MP");
+        
         education.setBranch("cs");
         education.setCourse("database");
         experience.setCompany("ikjfahouih");
         experience.setToDate("646");
         experience.setFromDate("65964");
+
         candidate.getEdu().add(education);
         candidate.getExp().add(experience);
+       candidate.getVan().add(vacancy); 
+        candidate.getEmp().add(employer);
         employer.setCompanyName("asdhj");
         employer.setContactNumber("5886");
         employer.setEId(1);
         employer.setEmail("asdfj");
         employer.setLocation("adshoijf");
         employer.setName("fsad");
-        candidate.getEmp().add(employer);
-       
-       employer.getCandidates().add(candidate);
+        employer.getVaccancy().add(vacancy);
+         employer.getCandidates().add(candidate);
+      
       skills.setField("fd");
       skills.setSkill_level("wsdh");
       skills.setSkill_name("frds");
       skills.setSkillId(1);
-     
+      skills.getVacancies().add(vacancy);     
         vacancy.setExperience_requirement("58");
         vacancy.setLast_date_to_apply("69");
         vacancy.setNo_of_vaccancy(65);
@@ -83,29 +87,40 @@ public class App
         vacancy.setPayment_scale(45.5f);
         vacancy.setVaccancy_id(1);
         vacancy.getCandidate().add(candidate);
-        vacancy.setEmp(employer);
-        skills.getSkill().add(vacancy);
+        vacancy.getEmp();
+      
         vacancy.getSkills().add(skills);
-        candidate.getVan().add(vacancy);  
-        employer.getVaccancy().add(vacancy);
+       
+       
        company.setCompany_name("dsf");
        company.setContact_no(55);
        company.setEmail("fsaduh");
        company.setRegistration_no(1);
        company.setScale("dfasf");
        company.setWeb_address("fasd");
-      admin.setA_id(1);
+
+       company.getAdmin().add(admin);
+       company.getEmployer().add(employer);
+       
+       admin.setA_id(1);
       admin.setEmail("fadshj");
       admin.setPassword("dfsjh");
-      
-      company.getAdmin().add(admin);
-      company.getEmployer().add(employer);
       admin.getCompany().add(company);
+      candidateDao.createCandidate(candidate);
+
+      skillsDao.addSkill(skills);
+     
+      vacancyDao.createVacancy(vacancy);
+   
+      employerDao.addEmployer(employer);
+    	
+     
+      
+       
+  
+        adminDao.createadmin(admin);
+        companyDao.createCompany(company);
         
-        
-        candidateDao.createCandidate(candidate);
-        employerDao.addEmployer(employer);
-        vacancyDao.createVacancy(vacancy);
         
         
         
@@ -115,6 +130,6 @@ public class App
         
         
     
-    
+        
     }
 }

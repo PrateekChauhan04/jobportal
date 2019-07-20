@@ -19,7 +19,7 @@ public class EmployerdaoImpl implements EmployerDao{
 
 	public void addEmployer(Employer er) {
 		// TODO Auto-generated method stub
-		
+		this.hTemplate.save(er);
 	}
 
 	public void updateEmployer(Employer er) {

@@ -49,10 +49,10 @@ List<Experience>exp=new ArrayList<Experience>();
 @ElementCollection
 List<Education>edu=new ArrayList<Education>();
 //
-@ManyToMany
+@ManyToMany(mappedBy = "candidate")
 List<vacancy>van=new ArrayList<vacancy>();
 //
-@ManyToMany
+@ManyToMany(mappedBy = "candidates")
 List<Employer> emp=new ArrayList<Employer>();
 
 
