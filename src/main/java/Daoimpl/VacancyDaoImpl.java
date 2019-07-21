@@ -11,7 +11,7 @@ import model.Vacancy;
 
 import Dao.VacancyDao;
 import model.Vacancy;
-public class VacancyDaoimpl implements VacancyDao{
+public class VacancyDaoImpl implements VacancyDao{
 
 	HibernateTemplate hTemplate;
 	public HibernateTemplate gethTemplate() {

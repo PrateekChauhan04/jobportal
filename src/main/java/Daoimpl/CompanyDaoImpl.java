@@ -8,7 +8,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 	import model.Company;
 	
 
-	public class Companydaoimpl implements CompanyDao {
+	public class CompanyDaoImpl implements CompanyDao {
 
 		private HibernateTemplate hTemplate;
 		

@@ -62,7 +62,7 @@ public class Company {
 	}
 	
 
-	@OneToMany(mappedBy="company1")
+	@OneToMany(mappedBy="company")
 	List<Employer> Employer = new ArrayList<Employer>();
 
 	@ManyToMany

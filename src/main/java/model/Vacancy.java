@@ -28,7 +28,7 @@ public class Vacancy {
 	@Column
 	String experienceRequirement;
 	@ManyToOne
-	Employer emp;
+	Employer employer;
 	@ManyToMany
 	List<Skills> skills= new ArrayList<Skills>();
 	public List<Skills> getSkills() {
@@ -38,10 +38,10 @@ public class Vacancy {
 		this.skills = skills;
 	}
 	public Employer getEmp() {
-		return emp;
+		return employer;
 	}
 	public void setEmp(Employer emp) {
-		this.emp = emp;
+		this.employer = emp;
 	}
 	@ManyToMany
 	List<Candidate>candidate=new ArrayList<Candidate>();

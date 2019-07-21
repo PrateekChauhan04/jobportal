@@ -8,7 +8,7 @@
 <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 <property name="url" value="jdbc:mysql://localhost:3306/jobportal"></property> 
 <property name="username" value="root"></property>
-<property name="password" value="root"></property>
+<property name="password" value="Gaurav"></property>
 </bean>
 
 <bean id="mysessionfactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
@@ -19,7 +19,7 @@
 <value>model.Experience</value>
 <value>model.Company</value>
 <value>model.Admin</value>
-<value>model.vacancy</value>
+<value>model.Vacancy</value>
 <value>model.Skills</value>
 <value>model.Employer</value>
 
@@ -53,7 +53,7 @@
 
 
 
-<bean id="companydaoimpl" class="Daoimpl.Companydaoimpl">
+<bean id="companydaoimpl" class="Daoimpl.CompanyDaoImpl">
 <property name="hTemplate" ref="template"></property>
 
 </bean>
@@ -63,7 +63,7 @@
 
 </bean>
 
-<bean id="vacancydaoimpl" class="Daoimpl.VacancyDaoimpl">
+<bean id="vacancydaoimpl" class="Daoimpl.VacancyDaoImpl">
 <property name="hTemplate" ref="template"></property>
 
 </bean>
@@ -86,7 +86,7 @@
 
 </bean>
 
-<bean id="vacancy" class="model.vacancy">
+<bean id="vacancy" class="model.Vacancy">
 
 
 </bean>

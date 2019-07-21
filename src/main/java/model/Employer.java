@@ -25,21 +25,21 @@ public class Employer {
 	@Column
 	private String companyName;
 	
-	@OneToMany (mappedBy = "emp")
-	List<vacancy> vaccancy=new ArrayList<vacancy>();
+	@OneToMany (mappedBy = "employer")
+	List<Vacancy> vaccancy=new ArrayList<Vacancy>();
 	
-	public List<vacancy> getVaccancy() {
+	public List<Vacancy> getVaccancy() {
 		return vaccancy;
 	}
-	public void setVaccancy(List<vacancy> vaccancy) {
+	public void setVaccancy(List<Vacancy> vaccancy) {
 		this.vaccancy = vaccancy;
 	}
 	
 	public Company getCompany1() {
-		return company1;
+		return company;
 	}
 	public void setCompany1(Company company1) {
-		this.company1 = company1;
+		this.company = company1;
 	}
 
 	@ManyToMany
@@ -52,7 +52,7 @@ public class Employer {
 		this.candidates = candidates;
 	}
 	@ManyToOne
-	Company company1;
+	Company company;
 	
 	public int getEId() {
 		return EId;

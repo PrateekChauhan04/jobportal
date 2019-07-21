@@ -3,7 +3,7 @@ package Dao;
 import java.util.List;
 
 import model.Company;
-import model.vacancy;
+
 
 public interface CompanyDao {
 

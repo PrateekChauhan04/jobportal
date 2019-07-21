@@ -11,7 +11,7 @@ import Dao.SkillsDao;
 import Dao.VacancyDao;
 import Daoimpl.AdminDaoImpl;
 import Daoimpl.CandidateDaoImpl;
-import Daoimpl.Companydaoimpl;
+import Daoimpl.CompanyDaoImpl;
 import model.Candidate;
 import model.Company;
 import model.Education;
@@ -79,8 +79,8 @@ public class App
         employer.getCandidates().add(candidate);
       
       skills.setField("fd");
-      skills.setSkill_level("wsdh");
-      skills.setSkill_name("frds");
+      skills.setSkillLevel("wsdh");
+      skills.setSkillName("frds");
       skills.setSkillId(1);
       skills.getVacancies().add(vacancy);
       
@@ -102,15 +102,15 @@ public class App
        company.setRegistration_no(1);
        company.setScale("dfasf");
        company.setWeb_address("fasd");     
-      // company.getAdmin().add(admin);
+      
        
        employer.setCompany1(company);
-//       company.getEmployer().add(employer);
+
        
       admin.setA_id(1);
       admin.setEmail("fadshj");
       admin.setPassword("dfsjh");
-     // admin.getCompany().add(company);
+
 
       
       candidateDao.createCandidate(candidate);

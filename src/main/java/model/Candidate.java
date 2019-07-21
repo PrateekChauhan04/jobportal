@@ -50,7 +50,7 @@ List<Experience>exp=new ArrayList<Experience>();
 List<Education>edu=new ArrayList<Education>();
 //
 @ManyToMany(mappedBy = "candidate")
-List<vacancy>van=new ArrayList<vacancy>();
+List<Vacancy>van=new ArrayList<Vacancy>();
 //
 @ManyToMany(mappedBy = "candidates")
 List<Employer> emp=new ArrayList<Employer>();
@@ -79,12 +79,12 @@ public void setExp(List<Experience> exp) {
 }
 
 
-public List<vacancy> getVan() {
+public List<Vacancy> getVan() {
 	return van;
 }
 
 
-public void setVan(List<vacancy> van) {
+public void setVan(List<Vacancy> van) {
 	this.van = van;
 }
 
